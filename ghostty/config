@@ -1,0 +1,16 @@
+background = 09090d 
+foreground = c0caf5
+mouse-hide-while-typing = true
+font-family = "MesloLGS Nerd Font"
+theme = TokyoNight Night
+maximize = true
+
+cursor-style = block
+cursor-style-blink = false
+cursor-color = c0caf5 
+cursor-text = 000000
+shell-integration-features = no-cursor
+font-feature = -calt, -liga, -dlig
+
+macos-titlebar-style = tabs
+keybind = cmd+shift+w=close_surface
