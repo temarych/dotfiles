@@ -1,0 +1,11 @@
+[status]
+sep_left = { open="", close="" }
+sep_right = { open="", close="" }
+
+# [mode]
+# normal_main = { fg = "#000000", bg = "#000000" }
+# normal_alt  = { fg = "#7aa2f7", bg = "#3b4261" }
+# select_main = { fg = "#282a36", bg = "#8be9fd" }
+# select_alt  = { fg = "#8be9fd", bg = "#44475a" }
+# unset_main = { fg = "#282a36", bg = "#ffb86c" }
+# unset_alt  = { fg = "#ffb86c", bg = "#44475a" }
