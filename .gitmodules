@@ -1,6 +1,6 @@
-[submodule "nvim-config"]
-	path = nvim-config
+[submodule "nvim"]
+	path = nvim
 	url = https://github.com/temarych/nvim-config.git
-[submodule "tmux-config"]
-	path = tmux-config
+[submodule "tmux"]
+	path = tmux
 	url = https://github.com/temarych/tmux-config.git
