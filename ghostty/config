@@ -13,4 +13,8 @@ shell-integration-features = no-cursor
 font-feature = -calt, -liga, -dlig
 
 macos-titlebar-style = tabs
+
 keybind = cmd+shift+w=close_surface
+keybind = cmd+shift+h=write_screen_file:paste 
+keybind = cmd+shift+j=text:\x1b0invim +'normal! G' \n
+keybind = shift+enter=text:\x1b\r
