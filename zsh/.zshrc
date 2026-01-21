@@ -119,8 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source <(fzf --zsh)
 
-set -o vi
-
 KEYTIMEOUT=1
 
 export EDITOR="nvim"
@@ -132,3 +130,14 @@ function vi-yank-xclip {
 
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
+
+# Vim Mode
+
+set -o vi
+
+bindkey -M viins '^P' history-beginning-search-backward
+bindkey -M vicmd '^P' history-beginning-search-backward
+
+bindkey -M viins '^N' history-beginning-search-forward
+bindkey -M vicmd '^N' history-beginning-search-forward
+
