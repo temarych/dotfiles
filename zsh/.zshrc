@@ -141,3 +141,10 @@ bindkey -M vicmd '^P' history-beginning-search-backward
 bindkey -M viins '^N' history-beginning-search-forward
 bindkey -M vicmd '^N' history-beginning-search-forward
 
+# Ngrok Completion
+
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+fpath+=/opt/homebrew/share/zsh/site-functions
+autoload -Uz compinit && compinit
