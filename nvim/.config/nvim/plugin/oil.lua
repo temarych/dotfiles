@@ -5,3 +5,5 @@ require("oil").setup({
     show_hidden = true
   }
 })
+
+vim.keymap.set("n", "<leader>pv", vim.cmd.Oil, { desc = "Open file explorer" })
