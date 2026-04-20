@@ -14,6 +14,7 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder |
 | [yazi](https://github.com/sxyazi/yazi) | File manager |
 | [AeroSpace](https://github.com/nikitabobko/AeroSpace) | Tiling window manager |
+| [TokyoNight](https://github.com/folke/tokyonight.nvim) | Theme |
 
 ## Requirements
 
@@ -27,4 +28,4 @@ git clone https://github.com/temarych/dotfiles
 source dotfiles/setup.sh
 ```
 
-The setup script installs all dependencies and symlinks all configs into home directory.
+The setup script installs dependencies and symlinks all configs into home directory.
