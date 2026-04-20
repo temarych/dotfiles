@@ -6,10 +6,14 @@ cask "alacritty"
 brew "fzf"
 brew "starship"
 brew "zsh"
-brew "tmux"
 
 brew "git"
 brew "ripgrep"
 brew "bat"
 
+brew "neovim"
+brew "tmux"
 brew "yazi"
+brew "bottom"
+
+brew "lua-language-server"
