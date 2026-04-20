@@ -1,5 +1,7 @@
 KEYTIMEOUT=1
 
+export TERM=alacritty
+
 eval "$(starship init zsh)"
 source <(fzf --zsh)
 

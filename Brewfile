@@ -6,6 +6,7 @@ cask "alacritty"
 brew "fzf"
 brew "starship"
 brew "zsh"
+brew "tmux"
 
 brew "git"
 brew "ripgrep"
