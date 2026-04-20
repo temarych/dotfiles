@@ -21,7 +21,7 @@ bindkey -M viins '^N' history-beginning-search-forward
 bindkey -M vicmd '^P' history-beginning-search-backward
 bindkey -M vicmd '^N' history-beginning-search-forward
 
-export PNPM_HOME="/Users/envdev/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
