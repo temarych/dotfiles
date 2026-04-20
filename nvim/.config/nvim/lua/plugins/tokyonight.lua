@@ -4,13 +4,17 @@ return {
   setup = function()
     require("tokyonight").setup({
       style = "night",
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
       transparent = true,
       on_colors = function() end,
-      on_highlights = function() end,
+      on_highlights = function(hl)
+        hl.StatusLine = { bg = 'none', fg = 'none' }
+      end,
     })
 
     vim.cmd.colorscheme("tokyonight")
-
-    vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'none', fg = 'none' })
   end
 }

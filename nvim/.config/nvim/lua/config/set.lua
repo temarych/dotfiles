@@ -17,5 +17,8 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-
 vim.opt.updatetime = 750
+
+vim.opt.fillchars = { eob = " " }
+
+vim.opt.laststatus = 3
