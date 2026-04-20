@@ -7,7 +7,10 @@ return {
   version = '1.x',
   setup = function()
     require("blink.cmp").setup({
-      keymap = { preset = 'default' },
+      keymap = {
+        preset = "default",
+        ["<C-j>"] = { "show" },
+      },
       appearance = {
         nerd_font_variant = 'mono'
       },
