@@ -22,3 +22,9 @@ vim.opt.updatetime = 750
 vim.opt.fillchars = { eob = " " }
 
 vim.opt.laststatus = 3
+
+vim.opt.pumborder = "rounded"
+vim.opt.pumheight = 10
+vim.opt.pummaxwidth = 40
+
+vim.opt.winborder = "rounded"

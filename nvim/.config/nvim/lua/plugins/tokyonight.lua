@@ -12,6 +12,14 @@ return {
       on_colors = function() end,
       on_highlights = function(hl)
         hl.StatusLine = { bg = 'none', fg = 'none' }
+
+        hl.PmenuBorder = { bg = 'none', fg = '#414868' }
+        hl.Pmenu = { bg = 'none' }
+        hl.PmenuMatch = { bg = 'none', fg = hl.PmenuMatch.fg }
+
+        hl.FloatBorder = { bg = 'none', fg = '#414868' }
+
+        hl.MiniCompletionInfoBorderOutdated = { bg = 'none', fg = '#414868' }
       end,
     })
 
