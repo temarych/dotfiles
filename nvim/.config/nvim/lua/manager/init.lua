@@ -2,10 +2,18 @@ local iterables = require("lib.iterables")
 
 local M = {}
 
+---@class VersionTag
+---@field tag string
+
+---@class VersionBranch
+---@field branch string
+
+---@alias Version VersionTag | VersionBranch
+
 ---@class PluginConfig
 ---@field source string 
 ---@field build string?
----@field version string?
+---@field version Version?
 ---@field dependencies string[]?
 ---@field setup fun()?
 
@@ -34,6 +42,15 @@ local function create_config_index(configs)
   return map
 end
 
+---@param version Version
+local function resolve_version(version)
+  if version.tag then
+    return vim.version.range(version.tag)
+  else
+    return version.branch
+  end
+end
+
 ---@param configs PluginConfig[]
 local function create_specs(configs)
   return iterables.map(configs, function(config)
@@ -41,7 +58,7 @@ local function create_specs(configs)
     return {
       src = config.source,
       build = config.build,
-      version = config.version and vim.version.range(config.version)
+      version = config.version and resolve_version(config.version)
     }
   end)
 end

@@ -4,7 +4,7 @@ return {
   dependencies = {
     'https://github.com/rafamadriz/friendly-snippets',
   },
-  version = '1.x',
+  version = { tag = '1.x' },
   setup = function()
     require("blink.cmp").setup({
       keymap = {
