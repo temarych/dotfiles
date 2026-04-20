@@ -139,6 +139,10 @@ function M.clean()
   end))
 end
 
+function M.update()
+  vim.pack.update(nil, { force = true })
+end
+
 function M.setup()
   local configs = load_configs()
   configs = sort_configs(configs)
