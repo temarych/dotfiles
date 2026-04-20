@@ -2,6 +2,10 @@
 background = '#1a1b26'
 foreground = '#c0caf5'
 
+[colors.selection]
+text = "CellForeground"
+background = "#414868"
+
 [colors.cursor]
 text = '#1a1b26'
 cursor = '#c0caf5'
