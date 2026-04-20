@@ -24,6 +24,9 @@ echo "Cloning zsh plugins..."
   git clone https://github.com/zsh-users/zsh-syntax-highlighting \
   "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
+echo "Installing pnpm dependencies..."
+pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
+
 echo "Stowing dotfiles..."
 stow alacritty starship zsh nvim tmux -t ~
 

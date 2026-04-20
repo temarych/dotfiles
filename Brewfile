@@ -11,6 +11,8 @@ brew "git"
 brew "ripgrep"
 brew "bat"
 
+brew "pnpm"
+
 brew "neovim"
 brew "tmux"
 brew "yazi"
