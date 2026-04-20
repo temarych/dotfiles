@@ -5,6 +5,7 @@ tap "nikitabobko/tap"
 cask "alacritty"
 cask "aerospace"
 
+brew "stow"
 brew "fzf"
 brew "starship"
 brew "zsh"
