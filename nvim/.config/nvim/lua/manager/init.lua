@@ -5,6 +5,7 @@ local M = {}
 ---@class PluginConfig
 ---@field source string 
 ---@field build string?
+---@field version string?
 ---@field dependencies string[]?
 ---@field setup fun()?
 
@@ -37,7 +38,11 @@ end
 local function create_specs(configs)
   return iterables.map(configs, function(config)
     ---@type vim.pack.Spec
-    return { src = config.source, build = config.build }
+    return {
+      src = config.source,
+      build = config.build,
+      version = config.version and vim.version.range(config.version)
+    }
   end)
 end
 
