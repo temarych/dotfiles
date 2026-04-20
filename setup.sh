@@ -24,8 +24,14 @@ echo "Cloning zsh plugins..."
   git clone https://github.com/zsh-users/zsh-syntax-highlighting \
   "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
+echo "Installing rustup and cargo..."
+curl https://sh.rustup.rs -sSf | sh -- -y
+
 echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
+
+echo "Installing cargo dependencies..."
+cargo install taplo-cli --locked
 
 echo "Stowing dotfiles..."
 stow alacritty starship zsh nvim tmux aerospace -t ~

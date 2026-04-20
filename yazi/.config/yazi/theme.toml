@@ -124,9 +124,9 @@ rules = [
   { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#7dcfff" },
 
   { name = "*", is = "orphan", bg = "reset", fg = "#f7768e" },
-  { name = "*", is = "exec"  , fg = "#9ece6a" },
+  { name = "*", is = "exec", fg = "#9ece6a" },
 
   { name = "*/", fg = "#7aa2f7" },
-  { name = "*", fg = "#c0caf5" }
+  { name = "*", fg = "#c0caf5" },
 ]
     
