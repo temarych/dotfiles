@@ -28,6 +28,6 @@ echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
 
 echo "Stowing dotfiles..."
-stow alacritty starship zsh nvim tmux -t ~
+stow alacritty starship zsh nvim tmux aerospace -t ~
 
 echo "Done! Open a new shell or run: source ~/.zshrc"
