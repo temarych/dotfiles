@@ -12,6 +12,9 @@ $character
 
 add_newline = false
 
+[directory]
+style = "blue"
+
 [git_branch]
 format = "[$symbol$branch]($style) "
 
