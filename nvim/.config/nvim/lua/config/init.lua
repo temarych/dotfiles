@@ -1,4 +1,5 @@
 require("config.set")
 require("config.lsp")
 require("config.remap")
-require("manager")
+require("config.plugins")
+require("config.ui")

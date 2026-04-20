@@ -2,6 +2,8 @@
 decorations = "None"
 startup_mode = "Maximized"
 option_as_alt = "Both"
+opacity = 0.9
+blur = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }

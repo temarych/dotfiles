@@ -7,9 +7,11 @@ return {
   setup = function()
     local theme = require('lualine.themes.auto')
 
+    theme.normal.c.bg = "none"
+
     require("lualine").setup({
       options = {
-        theme = theme
+        theme = theme,
       },
     })
   end

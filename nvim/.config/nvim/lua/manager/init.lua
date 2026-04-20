@@ -1,4 +1,6 @@
-local iterables = require("manager.iterables")
+local iterables = require("lib.iterables")
+
+local M = {}
 
 ---@class PluginConfig
 ---@field source string 
@@ -20,12 +22,43 @@ local function load_configs()
 end
 
 ---@param configs PluginConfig[]
+local function create_config_index(configs)
+  ---@type table<string, PluginConfig>
+  local map = {}
+
+  for _, config in ipairs(configs) do
+    map[config.source] = config
+  end
+
+  return map
+end
+
+---@param configs PluginConfig[]
+local function create_specs(configs)
+  return iterables.map(configs, function(config)
+    ---@type vim.pack.Spec
+    return { src = config.source, build = config.build }
+  end)
+end
+
+---@param configs PluginConfig[]
+local function setup_plugins(configs)
+  for _, config in ipairs(configs) do
+    if config.setup then
+      config.setup()
+    end
+  end
+end
+
+---@param configs PluginConfig[]
 local function sort_configs(configs)
   ---@type PluginConfig[]
   local result = {}
 
   ---@type table<string, boolean>
   local seen = {}
+
+  local index = create_config_index(configs)
 
   ---@param config PluginConfig 
   local function visit(config)
@@ -34,7 +67,7 @@ local function sort_configs(configs)
     seen[config.source] = true
 
     for _, dep in ipairs(config.dependencies or {}) do
-      local dep_config = iterables.find(configs, function(dep_config) return dep_config.source == dep end)
+      local dep_config = index[dep]
       if dep_config then visit(dep_config) end
     end
 
@@ -48,18 +81,11 @@ local function sort_configs(configs)
   return result
 end
 
-local function setup()
+function M.setup()
   local configs = load_configs()
-
   configs = sort_configs(configs)
-
-  vim.pack.add(iterables.map(configs, function(config) return { src = config.source, build = config.build } end))
-
-  for _, config in ipairs(configs) do
-    if config.setup then
-      config.setup()
-    end
-  end
+  vim.pack.add(create_specs(configs))
+  setup_plugins(configs)
 end
 
-setup()
+return M
