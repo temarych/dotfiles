@@ -6,7 +6,10 @@ local M = {}
 ---@return T?
 function M.find(t, fn)
   for _, v in ipairs(t) do
-    if fn(v) then return v end end
+    if fn(v) then
+      return v
+    end
+  end
 end
 
 ---@generic T, U
@@ -16,7 +19,8 @@ end
 function M.map(t, fn)
   local result = {}
   for _, v in ipairs(t) do
-    table.insert(result, fn(v)) end
+    table.insert(result, fn(v))
+  end
   return result
 end
 

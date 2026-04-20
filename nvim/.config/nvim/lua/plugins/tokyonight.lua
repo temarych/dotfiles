@@ -17,18 +17,18 @@ return {
       transparent = true,
       on_colors = function() end,
       on_highlights = function(hl)
-        hl.StatusLine = { bg = 'none', fg = 'none' }
+        hl.StatusLine = { bg = "none", fg = "none" }
 
-        hl.FloatBorder = { bg = 'none', fg = '#414868' }
+        hl.FloatBorder = { bg = "none", fg = "#414868" }
         hl.PmenuBorder = hl.FloatBorder
 
-        hl.Pmenu = { bg = 'none' }
-        hl.PmenuMatch = { bg = 'none', fg = hl.PmenuMatch.fg }
+        hl.Pmenu = { bg = "none" }
+        hl.PmenuMatch = { bg = "none", fg = hl.PmenuMatch.fg }
 
         setup_blink_highlights(hl)
       end,
     })
 
     vim.cmd.colorscheme("tokyonight")
-  end
+  end,
 }

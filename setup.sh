@@ -32,6 +32,7 @@ pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core
 
 echo "Installing cargo dependencies..."
 cargo install taplo-cli --locked
+cargo install stylua --features luajit
 
 echo "Stowing dotfiles..."
 stow alacritty starship zsh nvim tmux aerospace -t ~

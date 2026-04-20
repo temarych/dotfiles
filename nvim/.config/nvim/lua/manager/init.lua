@@ -11,7 +11,7 @@ local M = {}
 ---@alias Version VersionTag | VersionBranch
 
 ---@class PluginConfig
----@field source string 
+---@field source string
 ---@field build string?
 ---@field version Version?
 ---@field dependencies string[]?
@@ -21,7 +21,7 @@ local function load_configs()
   ---@type PluginConfig[]
   local configs = {}
 
-  for _, file in ipairs(vim.fn.glob(vim.fn.stdpath('config')..'/lua/plugins/*.lua', true, true)) do
+  for _, file in ipairs(vim.fn.glob(vim.fn.stdpath("config") .. "/lua/plugins/*.lua", true, true)) do
     ---@type PluginConfig
     local config = dofile(file)
     table.insert(configs, config)
@@ -58,7 +58,7 @@ local function create_specs(configs)
     return {
       src = config.source,
       build = config.build,
-      version = config.version and resolve_version(config.version)
+      version = config.version and resolve_version(config.version),
     }
   end)
 end
@@ -82,9 +82,11 @@ local function sort_configs(configs)
 
   local index = create_config_index(configs)
 
-  ---@param config PluginConfig 
+  ---@param config PluginConfig
   local function visit(config)
-    if seen[config.source] then return end
+    if seen[config.source] then
+      return
+    end
 
     seen[config.source] = true
 

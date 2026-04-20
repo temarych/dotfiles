@@ -4,8 +4,8 @@ return {
   setup = function()
     require("lazydev").setup({
       integrations = {
-        lspconfig = false
-      }
+        lspconfig = false,
+      },
     })
-  end
+  end,
 }

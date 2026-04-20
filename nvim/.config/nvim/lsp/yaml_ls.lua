@@ -1,17 +1,17 @@
 ---@type vim.lsp.Config
 return {
-  cmd = { 'yaml-language-server', '--stdio' },
-  filetypes = { 'yaml' },
-  root_markers = { '.git' },
+  cmd = { "yaml-language-server", "--stdio" },
+  filetypes = { "yaml" },
+  root_markers = { ".git" },
   settings = {
     redhat = { telemetry = { enabled = false } },
     yaml = {
       format = { enable = true },
       schemaStore = { enable = false, url = "" },
-      schemas = require('schemastore').yaml.schemas(),
+      schemas = require("schemastore").yaml.schemas(),
     },
   },
   on_init = function(client)
     client.server_capabilities.documentFormattingProvider = true
-  end
+  end,
 }

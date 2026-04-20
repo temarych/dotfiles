@@ -1,4 +1,4 @@
 ---@type PluginConfig
 return {
-  source = 'https://github.com/nvim-lua/plenary.nvim',
+  source = "https://github.com/nvim-lua/plenary.nvim",
 }

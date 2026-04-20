@@ -2,8 +2,8 @@ local strings = require("lib.strings")
 local logo = require("assets.logo")
 
 ---@class ButtonProps
----@field icon string 
----@field label string 
+---@field icon string
+---@field label string
 ---@field shortcut string
 ---@field command string
 ---@field width integer
@@ -56,33 +56,35 @@ local function create_menu(width)
         label = "New file",
         shortcut = "e",
         command = "ene | startinsert",
-        width = width
+        width = width,
       }),
       create_button({
         icon = "",
         label = "Plugins",
         shortcut = "p",
         command = "cd ~/.config/nvim | e lua/plugins",
-        width = width
+        width = width,
       }),
       create_button({
         icon = "",
         label = "Configuration",
         shortcut = "c",
         command = "cd ~/.config/nvim | e .",
-        width = width
+        width = width,
       }),
     },
     opts = {
-      spacing = 1
-    }
+      spacing = 1,
+    },
   }
 end
 
 ---@param list string[]
 ---@return integer
 local function get_max_width(list)
-  return math.max(unpack(vim.tbl_map(function(str) return #str end, list)))
+  return math.max(unpack(vim.tbl_map(function(str)
+    return #str
+  end, list)))
 end
 
 local function create_config()
@@ -103,20 +105,20 @@ local function create_config()
           { type = "padding", val = gap },
           create_menu(width),
           { type = "padding", val = padding },
-        }
-      }
+        },
+      },
     },
     opts = {
-      margin = padding
-    }
+      margin = padding,
+    },
   }
 end
 
 ---@type PluginConfig
 return {
-  source = 'https://github.com/goolord/alpha-nvim',
-  setup = function ()
+  source = "https://github.com/goolord/alpha-nvim",
+  setup = function()
     local config = create_config()
-    require('alpha').setup(config)
-  end
-};
+    require("alpha").setup(config)
+  end,
+}

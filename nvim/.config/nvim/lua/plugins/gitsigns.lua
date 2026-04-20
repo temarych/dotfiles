@@ -4,5 +4,5 @@ return {
   setup = function()
     local gs = require("gitsigns")
     vim.keymap.set("n", "<leader>hr", gs.reset_hunk, { desc = "Reset Hunk" })
-  end
+  end,
 }

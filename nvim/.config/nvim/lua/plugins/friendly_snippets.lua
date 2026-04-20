@@ -1,4 +1,4 @@
 ---@type PluginConfig
 return {
-  source = 'https://github.com/rafamadriz/friendly-snippets',
+  source = "https://github.com/rafamadriz/friendly-snippets",
 }
