@@ -16,6 +16,7 @@ add_newline = false
 style = "blue"
 
 [git_branch]
+symbol = " "
 format = "[$symbol$branch]($style) "
 
 [git_status]
