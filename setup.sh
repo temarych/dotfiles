@@ -35,6 +35,6 @@ cargo install taplo-cli --locked
 cargo install stylua --features luajit
 
 echo "Stowing dotfiles..."
-stow alacritty starship zsh nvim tmux aerospace -t ~
+stow alacritty starship zsh nvim tmux aerospace git -t ~
 
 echo "Done! Open a new shell or run: source ~/.zshrc"
