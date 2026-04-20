@@ -1,3 +1,9 @@
+---@param hl table<string, string|tokyonight.Highlight>
+local function setup_blink_highlights(hl)
+  hl.BlinkCmpMenuBorder = hl.FloatBorder
+  hl.BlinkCmpDocBorder = hl.FloatBorder
+end
+
 ---@type PluginConfig
 return {
   source = "https://github.com/folke/tokyonight.nvim",
@@ -18,6 +24,8 @@ return {
 
         hl.Pmenu = { bg = 'none' }
         hl.PmenuMatch = { bg = 'none', fg = hl.PmenuMatch.fg }
+
+        setup_blink_highlights(hl)
       end,
     })
 

@@ -73,7 +73,12 @@ local function sort_configs(configs)
 
     for _, dep in ipairs(config.dependencies or {}) do
       local dep_config = index[dep]
-      if dep_config then visit(dep_config) end
+
+      if not dep_config then
+        error("Dependency should have a corresponding config file: " .. dep)
+      end
+
+      visit(dep_config)
     end
 
     table.insert(result, config)

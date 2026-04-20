@@ -2,7 +2,6 @@
 return {
   source = 'https://github.com/saghen/blink.cmp',
   dependencies = {
-    'https://github.com/folke/tokyonight.nvim',
     'https://github.com/rafamadriz/friendly-snippets',
   },
   version = '1.x',
@@ -18,8 +17,5 @@ return {
       },
       fuzzy = { implementation = "prefer_rust_with_warning" },
     })
-
-    vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { link = "FloatBorder" })
-    vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { link = "FloatBorder" })
   end
 }
