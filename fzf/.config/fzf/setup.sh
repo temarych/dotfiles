@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+export FZF_DEFAULT_OPTS="\
   --layout=reverse \
   --color=bg:-1 \
-  --color=bg+:#414868 \
+  --color=bg+:-1 \
   --color=fg:#a9b1d6 \
   --color=fg+:#c0caf5 \
   --color=hl:#7aa2f7 \
@@ -17,4 +17,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=scrollbar:#414868 \
   --color=separator:#414868 \
   --color=spinner:#7aa2f7 \
+  --color=list-border:#414868,list-label:#414868 \
+  --color=preview-border:#414868,preview-label:#414868
+  --color=input-border:#414868,input-label:#414868
 "
