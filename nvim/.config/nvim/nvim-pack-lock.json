@@ -34,6 +34,10 @@
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
     },
+    "mini-git": {
+      "rev": "a007cc40a4585c4f54787ddcf07295c2689daeb4",
+      "src": "https://github.com/nvim-mini/mini-git"
+    },
     "mini.diff": {
       "rev": "ab11575a6c147ecfba894d676d0c93e855021d34",
       "src": "https://github.com/nvim-mini/mini.diff"
