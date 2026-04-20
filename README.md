@@ -14,7 +14,7 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder |
 | [yazi](https://github.com/sxyazi/yazi) | File manager |
 | [AeroSpace](https://github.com/nikitabobko/AeroSpace) | Tiling window manager |
-| [TokyoNight](https://github.com/folke/tokyonight.nvim) | Theme |
+| [Tokyo Night](https://github.com/folke/tokyonight.nvim) | Theme |
 
 ## Requirements
 
