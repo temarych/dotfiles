@@ -1,6 +1,7 @@
 [window]
 decorations = "None"
 startup_mode = "Maximized"
+option_as_alt = "Both"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
