@@ -27,8 +27,4 @@ echo "Cloning zsh plugins..."
 echo "Stowing dotfiles..."
 stow alacritty starship zsh nvim tmux -t ~
 
-echo "Installing TPM and plugins..."
-[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-~/.tmux/plugins/tpm/bin/install_plugins
-
 echo "Done! Open a new shell or run: source ~/.zshrc"
