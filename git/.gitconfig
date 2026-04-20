@@ -1,0 +1,8 @@
+[alias]
+  root = rev-parse --show-toplevel
+  r = root
+  st = status
+  co = checkout
+  cb = checkout -b
+  cm = commit -m
+  c = commit
