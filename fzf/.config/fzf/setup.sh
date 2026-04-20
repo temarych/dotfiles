@@ -1,17 +1,20 @@
 #!/usr/bin/env zsh
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --color=bg:-1 \
+  --layout=reverse \
+  --color=bg:#1a1b26 \
   --color=bg+:#414868 \
   --color=fg:#a9b1d6 \
   --color=fg+:#c0caf5 \
-  --color=hl:#f7768e \
-  --color=hl+:#f7768e \
-  --color=prompt:#7aa2f7 \
-  --color=pointer:#bb9af7 \
-  --color=marker:#9ece6a \
+  --color=hl:#7dcfff \
+  --color=hl+:#7dcfff \
+  --color=gutter:#1a1b26 \
+  --color=info:#414868 \
+  --color=marker:#bb9af7 \
+  --color=pointer:#7dcfff \
+  --color=prompt:#7dcfff \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#414868 \
+  --color=separator:#414868 \
   --color=spinner:#7dcfff \
-  --color=info:#a9b1d6 \
-  --color=header:#7dcfff \
-  --color=border:#414868 \
-  --color=separator:#414868"
+"
