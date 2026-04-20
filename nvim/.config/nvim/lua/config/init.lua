@@ -1,7 +1,6 @@
 require("config.set")
-require("config.lsp")
 require("config.remap")
 require("config.plugins")
+require("config.lsp")
 require("config.ui")
 require("config.filetypes")
-require("config.completion")

@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "SchemaStore.nvim": {
+      "rev": "0ce1f8aba51db6812382a4135f5b20a9f0c959ec",
+      "src": "https://github.com/b0o/SchemaStore.nvim"
+    },
     "gitsigns.nvim": {
       "rev": "db486b42299b2e3f5831809617af21becf268a39",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
