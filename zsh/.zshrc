@@ -1,6 +1,7 @@
 KEYTIMEOUT=1
 
 export TERM=alacritty
+export EDITOR=nvim
 
 eval "$(starship init zsh)"
 source <(fzf --zsh)

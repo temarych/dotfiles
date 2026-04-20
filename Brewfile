@@ -11,3 +11,5 @@ brew "tmux"
 brew "git"
 brew "ripgrep"
 brew "bat"
+
+brew "yazi"
