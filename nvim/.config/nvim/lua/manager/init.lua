@@ -17,11 +17,13 @@ local M = {}
 ---@field dependencies string[]?
 ---@field setup fun()?
 
+local plugins_dir = vim.fn.stdpath("config") .. "/lua/plugins"
+
 local function load_configs()
   ---@type PluginConfig[]
   local configs = {}
 
-  for _, file in ipairs(vim.fn.glob(vim.fn.stdpath("config") .. "/lua/plugins/*.lua", true, true)) do
+  for _, file in ipairs(vim.fn.glob(plugins_dir .. "/*.lua", true, true)) do
     ---@type PluginConfig
     local config = dofile(file)
     table.insert(configs, config)
@@ -108,6 +110,33 @@ local function sort_configs(configs)
   end
 
   return result
+end
+
+---@param configs PluginConfig[]
+local function get_missing_sources(configs)
+  ---@type vim.pack.PlugData[]
+  local missing = {}
+
+  for _, data in ipairs(vim.pack.get()) do
+    local config = iterables.find(configs, function(config)
+      return config.source == data.spec.src
+    end)
+
+    if not config then
+      table.insert(missing, data)
+    end
+  end
+
+  return missing
+end
+
+function M.clean()
+  local configs = load_configs()
+  local missing = get_missing_sources(configs)
+
+  vim.pack.del(iterables.map(missing, function(data)
+    return data.spec.name
+  end))
 end
 
 function M.setup()

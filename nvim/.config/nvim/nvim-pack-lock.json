@@ -25,10 +25,6 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
-    "gitsigns.nvim": {
-      "rev": "db486b42299b2e3f5831809617af21becf268a39",
-      "src": "https://github.com/lewis6991/gitsigns.nvim"
-    },
     "harpoon": {
       "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
       "src": "https://github.com/theprimeagen/harpoon",
@@ -37,14 +33,6 @@
     "lazydev.nvim": {
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
-    },
-    "lualine.nvim": {
-      "rev": "8811f3f3f4dc09d740c67e9ce399e7a541e2e5b2",
-      "src": "https://github.com/nvim-lualine/lualine.nvim"
-    },
-    "mini.completion": {
-      "rev": "ffbdb06d2fa6a3fcef3891108bb38e33223b27a7",
-      "src": "https://github.com/nvim-mini/mini.completion"
     },
     "mini.diff": {
       "rev": "ab11575a6c147ecfba894d676d0c93e855021d34",
@@ -57,10 +45,6 @@
     "mini.snippets": {
       "rev": "8e3acd41bd7ee8f89967c83bacc93871b98a14aa",
       "src": "https://github.com/nvim-mini/mini.snippets"
-    },
-    "mini.starter": {
-      "rev": "7bdc9decc8b623f245c1e42a64bc41e61d574c5e",
-      "src": "https://github.com/nvim-mini/mini.starter"
     },
     "mini.statusline": {
       "rev": "b456bfe845e475e9cec065b7a9a1ef657ad2f41b",
