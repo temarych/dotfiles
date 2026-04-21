@@ -23,4 +23,10 @@ function M.split_lines(raw)
   return lines
 end
 
+---@param value string
+---@return string?
+function M.get_first_line(value)
+  return value:match("^[^\n]+")
+end
+
 return M
