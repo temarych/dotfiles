@@ -20,8 +20,8 @@ return {
           return MiniStatusline.combine_groups({
             { hl = mode_hl, strings = { mode:upper() } },
             { hl = "Identifier", strings = { git } },
-            { hl = "WarningMsg", strings = { diff } },
-            { hl = "Normal", strings = { diagnostics } },
+            { hl = "DiagnosticWarn", strings = { diff } },
+            { hl = "DiagnosticHint", strings = { diagnostics } },
             "%<",
             "%=",
             { hl = "Directory", strings = { fileinfo } },
