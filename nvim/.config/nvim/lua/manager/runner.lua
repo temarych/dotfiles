@@ -1,35 +1,16 @@
 local resolver = require("manager.resolver")
 local iterables = require("lib.iterables")
+local spec = require("manager.spec")
 
 local M = {}
 
----@param version Version
-local function create_version(version)
-  if version.tag then
-    return vim.version.range(version.tag)
-  else
-    return version.branch
-  end
-end
-
 ---@param configs PluginConfig[]
-local function create_specs(configs)
-  return iterables.map(configs, function(config)
-    ---@type vim.pack.Spec
-    return {
-      src = config.source,
-      build = config.build,
-      version = config.version and create_version(config.version),
-    }
-  end)
-end
-
----@param configs PluginConfig[]
-local function get_missing_sources(configs)
+---@param plug_data vim.pack.PlugData[]
+local function get_missing_sources(configs, plug_data)
   ---@type vim.pack.PlugData[]
   local missing = {}
 
-  for _, data in ipairs(vim.pack.get()) do
+  for _, data in ipairs(plug_data) do
     local config = iterables.find(configs, function(config)
       return config.source == data.spec.src
     end)
@@ -53,7 +34,7 @@ end
 
 ---@param configs PluginConfig[]
 function M.load_plugins(configs)
-  vim.pack.add(create_specs(configs))
+  vim.pack.add(spec.create_specs(configs))
 end
 
 function M.update_plugins()
@@ -62,7 +43,9 @@ end
 
 ---@param configs PluginConfig[]
 function M.clean_plugins(configs)
-  local missing = get_missing_sources(configs)
+  local plug_data = vim.pack.get()
+
+  local missing = get_missing_sources(configs, plug_data)
 
   vim.pack.del(iterables.map(missing, function(data)
     return data.spec.name
