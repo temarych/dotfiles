@@ -14,6 +14,9 @@ return {
   source = "https://github.com/nvim-mini/mini-git",
   setup = function()
     require("mini.git").setup()
+
+    vim.keymap.set({ "n", "x" }, "<Leader>gs", MiniGit.show_at_cursor, { desc = "Show at cursor" })
+
     setup_summary_format()
   end,
 }

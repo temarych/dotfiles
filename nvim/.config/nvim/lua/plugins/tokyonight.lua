@@ -29,9 +29,11 @@ return {
       on_highlights = function(hl)
         hl.StatusLine = { bg = "none", fg = "none" }
 
+        hl.TabLine = { bg = "none", fg = "#414868" }
         hl.FloatBorder = { bg = "none", fg = "#414868" }
-        hl.PmenuBorder = hl.FloatBorder
+        hl.WinSeparator = hl.FloatBorder
 
+        hl.PmenuBorder = hl.FloatBorder
         hl.Pmenu = { bg = "none" }
         hl.PmenuMatch = { bg = "none", fg = hl.PmenuMatch.fg }
 
