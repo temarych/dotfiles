@@ -7,7 +7,11 @@ return {
     MiniDiff.setup({
       view = {
         style = "sign",
-        signs = { add = "┃", change = "┃", delete = "┃" },
+        signs = {
+          add = "┃",
+          change = "┃",
+          delete = "▁",
+        },
         priority = 199,
       },
       delay = {
