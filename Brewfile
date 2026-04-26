@@ -1,5 +1,3 @@
-tap "homebrew/core"
-tap "homebrew/cask"
 tap "nikitabobko/tap"
 
 cask "alacritty"
