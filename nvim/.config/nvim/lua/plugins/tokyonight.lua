@@ -1,17 +1,19 @@
----@param hl table<string, string|tokyonight.Highlight>
-local function setup_blink_highlights(hl)
-  hl.BlinkCmpMenuBorder = hl.FloatBorder
-  hl.BlinkCmpDocBorder = hl.FloatBorder
+---@param hl tokyonight.Highlights
+---@param c ColorScheme
+local function setup_telescope_highlights(hl, c)
+  hl.TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float }
+  hl.TelescopeTitle = { fg = c.fg, bg = c.bg_float }
+
+  hl.TelescopePromptBorder = { fg = c.border_highlight, bg = c.bg_float }
+  hl.TelescopePromptTitle = { fg = c.fg, bg = c.bg_float }
 end
 
----@param hl table<string, string|tokyonight.Highlight>
-local function setup_telescope_highlights(hl)
-  hl.TelescopeBorder = hl.FloatBorder
-  hl.TelescopePromptBorder = hl.FloatBorder
-
-  hl.TelescopePromptTitle = hl.Normal
-  hl.TelescopePreviewTitle = hl.Normal
-  hl.TelescopeResultsTitle = hl.Normal
+---@param hl tokyonight.Highlights
+---@param c ColorScheme
+local function setup_tabline_highlights(hl, c)
+  hl.TabLine = { fg = c.dark5, bg = "NONE" }
+  hl.TabLineSel = { fg = c.blue, bg = "NONE" }
+  hl.TabLineFill = { bg = "NONE" }
 end
 
 ---@type PluginConfig
@@ -25,22 +27,13 @@ return {
         floats = "transparent",
       },
       transparent = true,
-      on_colors = function() end,
-      on_highlights = function(hl)
-        hl.StatusLine = { bg = "none", fg = "none" }
-
-        hl.TabLine = { bg = "none", fg = "#414868" }
-        hl.TabLineSel = { bg = "none", fg = hl.Directory.fg }
-
-        hl.FloatBorder = { bg = "none", fg = "#414868" }
-        hl.WinSeparator = hl.FloatBorder
-
-        hl.PmenuBorder = hl.FloatBorder
-        hl.Pmenu = { bg = "none" }
-        hl.PmenuMatch = { bg = "none", fg = hl.PmenuMatch.fg }
-
-        setup_blink_highlights(hl)
-        setup_telescope_highlights(hl)
+      on_colors = function(c)
+        c.bg_statusline = nil
+        c.border_highlight = c.fg_gutter
+      end,
+      on_highlights = function(hl, c)
+        setup_telescope_highlights(hl, c)
+        setup_tabline_highlights(hl, c)
       end,
     })
 
