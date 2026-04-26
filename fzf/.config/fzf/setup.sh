@@ -9,6 +9,7 @@ export FZF_DEFAULT_OPTS="\
   --color=hl:#7aa2f7 \
   --color=hl+:#7aa2f7 \
   --color=gutter:-1 \
+  --gutter=' ' \
   --color=info:#737aa2 \
   --color=marker:#bb9af7 \
   --color=pointer:#7aa2f7 \

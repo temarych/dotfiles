@@ -35,7 +35,7 @@ cargo install taplo-cli --locked
 cargo install stylua --features luajit
 
 echo "Stowing dotfiles..."
-stow alacritty starship zsh nvim tmux aerospace git -t ~
+stow alacritty starship fzf zsh nvim tmux aerospace git -t ~
 
 echo "Disabling font smoothing for Alacritty..."
 defaults write org.alacritty AppleFontSmoothing -int 0
