@@ -3,3 +3,9 @@ vim.filetype.add({
     [".*/%.config/tmux/.*%.conf"] = "tmux",
   },
 })
+
+vim.filetype.add({
+  pattern = {
+    [".*/%.gitconfig%.local"] = "gitconfig",
+  },
+})

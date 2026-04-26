@@ -8,6 +8,7 @@ brew "fzf"
 brew "starship"
 brew "zsh"
 
+brew "gh"
 brew "git"
 brew "ripgrep"
 brew "bat"

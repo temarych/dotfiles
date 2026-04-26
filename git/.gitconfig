@@ -6,3 +6,6 @@
   cb = checkout -b
   cm = commit -m
   c = commit
+
+[include]
+  path = ~/.gitconfig.local
