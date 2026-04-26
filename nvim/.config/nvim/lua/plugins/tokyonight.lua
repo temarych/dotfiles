@@ -30,6 +30,8 @@ return {
         hl.StatusLine = { bg = "none", fg = "none" }
 
         hl.TabLine = { bg = "none", fg = "#414868" }
+        hl.TabLineSel = { bg = "none", fg = hl.Directory.fg }
+
         hl.FloatBorder = { bg = "none", fg = "#414868" }
         hl.WinSeparator = hl.FloatBorder
 
