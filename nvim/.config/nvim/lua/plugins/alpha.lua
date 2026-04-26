@@ -16,8 +16,8 @@ local function create_button(props)
     width = props.width,
     cursor = 3,
     align_shortcut = "right",
-    hl = { { "Keyword", 0, 1 }, { "Normal", 1, #props.label } },
-    hl_shortcut = "Identifier",
+    hl = { { "AlphaButtonIcons", 0, 1 }, { "AlphaButtons", 1, #props.label } },
+    hl_shortcut = "AlphaShortcut",
     keymap = { "n", props.shortcut, "<cmd>" .. props.command .. "<CR>", { noremap = true, silent = true } },
   }
 
@@ -41,7 +41,7 @@ local function create_header(logo_lines)
     val = logo_lines,
     opts = {
       position = "center",
-      hl = "Type",
+      hl = "AlphaHeader",
     },
   }
 end

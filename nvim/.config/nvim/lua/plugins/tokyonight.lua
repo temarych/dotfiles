@@ -16,6 +16,15 @@ local function setup_tabline_highlights(hl, c)
   hl.TabLineFill = { bg = "NONE" }
 end
 
+---@param hl tokyonight.Highlights
+---@param c ColorScheme
+local function setup_alpha_highlights(hl, c)
+  hl.AlphaButtons = { fg = c.fg, bg = "NONE" }
+  hl.AlphaButtonIcons = { fg = c.blue5, bg = "NONE" }
+  hl.AlphaHeader = { fg = c.blue1, bg = "NONE" }
+  hl.AlphaShortcut = { fg = c.orange, bg = "NONE" }
+end
+
 ---@type PluginConfig
 return {
   source = "https://github.com/folke/tokyonight.nvim",
@@ -34,6 +43,7 @@ return {
       on_highlights = function(hl, c)
         setup_telescope_highlights(hl, c)
         setup_tabline_highlights(hl, c)
+        setup_alpha_highlights(hl, c)
       end,
     })
 
