@@ -1,6 +1,9 @@
 tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
 
 cask "alacritty"
+
+brew "borders"
 cask "aerospace"
 
 brew "stow"

@@ -1,6 +1,6 @@
 config-version = 2
 
-after-startup-command = []
+after-startup-command = ['exec-and-forget borders']
 
 start-at-login = false
 
