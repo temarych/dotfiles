@@ -2,10 +2,10 @@
 ---@param c ColorScheme
 local function setup_telescope_highlights(hl, c)
   hl.TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float }
-  hl.TelescopeTitle = { fg = c.fg, bg = c.bg_float }
+  hl.TelescopeTitle = { fg = c.dark5, bg = c.bg_float }
 
   hl.TelescopePromptBorder = { fg = c.border_highlight, bg = c.bg_float }
-  hl.TelescopePromptTitle = { fg = c.fg, bg = c.bg_float }
+  hl.TelescopePromptTitle = { fg = c.dark5, bg = c.bg_float }
 end
 
 ---@param hl tokyonight.Highlights
