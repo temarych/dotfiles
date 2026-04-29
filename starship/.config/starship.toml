@@ -11,7 +11,8 @@ $character
 """
 
 right_format = """
-$python
+$python\
+$nodejs
 """
 
 add_newline = false
@@ -25,7 +26,7 @@ format = "([$symbol$branch]($style) )"
 style = "purple"
 
 [git_status]
-format = '([$all_status$ahead_behind]($style))'
+format = "([$all_status$ahead_behind]($style))"
 style = "yellow"
 stashed = '\$${count} '
 ahead = "⇡${count} "
@@ -39,6 +40,10 @@ staged = "+${count} "
 untracked = "?${count} "
 
 [python]
-symbol = ""
+symbol = " "
 style = "blue"
-format = '( [$symbol $virtualenv]($style))'
+format = "( [$symbol$virtualenv]($style))"
+
+[nodejs]
+format = "( [$symbol$version]($style))"
+version_format = "${raw}"
