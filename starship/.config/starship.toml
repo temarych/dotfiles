@@ -10,6 +10,10 @@ $git_status\
 $character
 """
 
+right_format = """
+$python
+"""
+
 add_newline = false
 
 [directory]
@@ -17,7 +21,8 @@ style = "blue"
 
 [git_branch]
 symbol = " "
-format = "[$symbol$branch]($style) "
+format = "([$symbol$branch]($style) )"
+style = "purple"
 
 [git_status]
 format = '([$all_status$ahead_behind]($style))'
@@ -32,3 +37,8 @@ renamed = "»${count} "
 modified = "!${count} "
 staged = "+${count} "
 untracked = "?${count} "
+
+[python]
+symbol = ""
+style = "blue"
+format = '( [$symbol $virtualenv]($style))'
