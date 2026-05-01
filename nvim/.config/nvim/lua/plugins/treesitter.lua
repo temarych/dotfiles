@@ -4,6 +4,19 @@ local parsers = {
   "markdown",
   "markdown_inline",
   "lua",
+  "toml",
+  "yaml",
+  "json",
+  "bash",
+  "zsh",
+  "tmux",
+  "vimdoc",
+  "query",
+  "comment",
+  "diff",
+  "git_config",
+  "dockerfile",
+  "regex",
 }
 
 local function setup_treesitter_for_files()

@@ -13,6 +13,7 @@ return {
     MiniAi.setup({
       custom_textobjects = {
         f = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
+        c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),
       },
     })
   end,
