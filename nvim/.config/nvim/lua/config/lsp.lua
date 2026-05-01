@@ -6,6 +6,7 @@ local function enable_lsps()
   vim.lsp.enable("ty_ls")
   vim.lsp.enable("ruff_ls")
   vim.lsp.enable("pyright_ls")
+  vim.lsp.enable("ts_ls")
 end
 
 local function override_lsp_config()
@@ -24,6 +25,8 @@ end
 
 local function setup_keymaps()
   vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 end
 
 enable_lsps()

@@ -18,6 +18,8 @@ local parsers = {
   "dockerfile",
   "regex",
   "luadoc",
+  "typescript",
+  "tsx",
 }
 
 local function setup_treesitter_for_files()
