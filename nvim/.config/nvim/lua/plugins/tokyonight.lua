@@ -25,6 +25,12 @@ local function setup_alpha_highlights(hl, c)
   hl.AlphaShortcut = { fg = c.orange, bg = "NONE" }
 end
 
+---@param hl tokyonight.Highlights
+---@param c ColorScheme
+local function setup_pmenu_highlights(hl, c)
+  hl.PmenuExtra = { fg = c.fg, bg = "NONE" }
+end
+
 ---@type PluginConfig
 return {
   source = "https://github.com/folke/tokyonight.nvim",
@@ -45,6 +51,7 @@ return {
         setup_telescope_highlights(hl, c)
         setup_tabline_highlights(hl, c)
         setup_alpha_highlights(hl, c)
+        setup_pmenu_highlights(hl, c)
       end,
     })
 
