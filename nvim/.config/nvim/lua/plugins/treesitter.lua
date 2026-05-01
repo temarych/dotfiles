@@ -3,25 +3,33 @@ local parsers = {
   "python",
   "markdown",
   "markdown_inline",
-}
-
----@type string[]
-local filetypes = {
-  "python",
-  "markdown",
+  "lua",
 }
 
 local function setup_treesitter_for_files()
   vim.api.nvim_create_autocmd("FileType", {
-    pattern = filetypes,
+    pattern = "*",
     callback = function()
-      vim.treesitter.start()
+      local filetype = vim.bo.filetype
+      local lang = vim.treesitter.language.get_lang(filetype)
 
-      vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-      vim.wo[0][0].foldmethod = "expr"
-      vim.wo[0][0].foldlevel = 99
+      if not lang then
+        return
+      end
 
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      if vim.treesitter.query.get(lang, "highlights") then
+        vim.treesitter.start()
+      end
+
+      if vim.treesitter.query.get(lang, "folds") then
+        vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+        vim.wo[0][0].foldmethod = "expr"
+        vim.wo[0][0].foldlevel = 99
+      end
+
+      if vim.treesitter.query.get(lang, "indents") then
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end
     end,
   })
 end
