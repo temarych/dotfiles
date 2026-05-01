@@ -21,11 +21,16 @@ bindkey -M viins '^N' history-beginning-search-forward
 bindkey -M vicmd '^P' history-beginning-search-backward
 bindkey -M vicmd '^N' history-beginning-search-forward
 
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 export PNPM_HOME="$HOME/Library/pnpm"
 
+export PNPM_HOME="/Users/temarych/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
-
-. "$HOME/.cargo/env"

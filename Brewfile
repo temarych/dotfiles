@@ -15,6 +15,7 @@ brew "bat"
 
 brew "uv"
 brew "pnpm"
+brew "node"
 
 brew "neovim"
 brew "tmux"
