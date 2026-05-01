@@ -17,6 +17,7 @@ local parsers = {
   "git_config",
   "dockerfile",
   "regex",
+  "luadoc",
 }
 
 local function setup_treesitter_for_files()

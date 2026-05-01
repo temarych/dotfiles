@@ -29,6 +29,7 @@ curl https://sh.rustup.rs -sSf | sh -- -y
 
 echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
+pnpm add -g pyright
 
 echo "Installing uv dependencies.."
 uv tool install ty@latest

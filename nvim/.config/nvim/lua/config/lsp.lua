@@ -1,8 +1,31 @@
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("json_ls")
-vim.lsp.enable("yaml_ls")
-vim.lsp.enable("toml_ls")
-vim.lsp.enable("ty_ls")
-vim.lsp.enable("ruff_ls")
+local function enable_lsps()
+  vim.lsp.enable("lua_ls")
+  vim.lsp.enable("json_ls")
+  vim.lsp.enable("yaml_ls")
+  vim.lsp.enable("toml_ls")
+  vim.lsp.enable("ty_ls")
+  vim.lsp.enable("ruff_ls")
+  vim.lsp.enable("pyright_ls")
+end
 
-vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+local function override_lsp_config()
+  vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+      if not client then
+        return
+      end
+
+      client.server_capabilities.semanticTokensProvider = nil
+    end,
+  })
+end
+
+local function setup_keymaps()
+  vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+end
+
+enable_lsps()
+override_lsp_config()
+setup_keymaps()
