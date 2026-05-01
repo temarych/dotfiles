@@ -1,7 +1,7 @@
 tap "nikitabobko/tap"
 
 cask "alacritty"
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 
 brew "stow"
 brew "fzf"

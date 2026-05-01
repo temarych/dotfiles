@@ -25,7 +25,7 @@ echo "Cloning zsh plugins..."
   "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
 echo "Installing rustup and cargo..."
-curl https://sh.rustup.rs -sSf | sh -- -y
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
@@ -39,6 +39,7 @@ uv tool install ruff@latest
 echo "Installing cargo dependencies..."
 cargo install taplo-cli --locked
 cargo install stylua --features luajit
+cargo install tree-sitter-cli --locked
 
 echo "Stowing dotfiles..."
 stow alacritty starship fzf zsh nvim tmux aerospace git -t ~
