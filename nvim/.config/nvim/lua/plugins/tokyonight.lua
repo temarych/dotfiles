@@ -38,6 +38,7 @@ return {
       transparent = true,
       on_colors = function(c)
         c.bg_statusline = nil
+        c.border = c.fg_gutter
         c.border_highlight = c.fg_gutter
       end,
       on_highlights = function(hl, c)
