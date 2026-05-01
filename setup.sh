@@ -30,6 +30,10 @@ curl https://sh.rustup.rs -sSf | sh -- -y
 echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
 
+echo "Installing uv dependencies.."
+uv tool install ty@latest
+uv tool install ruff@latest
+
 echo "Installing cargo dependencies..."
 cargo install taplo-cli --locked
 cargo install stylua --features luajit

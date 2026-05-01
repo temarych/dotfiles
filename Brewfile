@@ -13,6 +13,7 @@ brew "git"
 brew "ripgrep"
 brew "bat"
 
+brew "uv"
 brew "pnpm"
 
 brew "neovim"
