@@ -23,6 +23,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm install 22
 
+echo "Installing bun..."
+curl -fsSL https://bun.com/install | bash
+
 echo "Cloning zsh plugins..."
 [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ] || \
   git clone https://github.com/zsh-users/zsh-autosuggestions \
