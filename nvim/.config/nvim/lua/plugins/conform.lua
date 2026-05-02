@@ -16,6 +16,17 @@ return {
           "ruff_format",
           "ruff_organize_imports",
         },
+        javascript = { "biome" },
+        typescript = { "biome" },
+        jsx = { "biome" },
+        tsx = { "biome" },
+        json = { "biome" },
+        jsonc = { "biome" },
+      },
+      formatters = {
+        biome = {
+          require_cwd = true,
+        },
       },
     })
   end,
