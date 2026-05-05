@@ -20,6 +20,7 @@ local parsers = {
   "luadoc",
   "typescript",
   "tsx",
+  "html",
 }
 
 local function setup_treesitter_for_files()
