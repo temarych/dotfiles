@@ -9,3 +9,6 @@ vim.keymap.set("n", "<leader>R", function()
   vim.cmd("mksession! " .. vim.fn.fnameescape(session))
   vim.cmd("restart source " .. vim.fn.fnameescape(session))
 end, { desc = "Restart Neovim" })
+
+vim.keymap.set("n", "<leader>+", "<C-a>")
+vim.keymap.set("n", "<leader>-", "<C-x>")
