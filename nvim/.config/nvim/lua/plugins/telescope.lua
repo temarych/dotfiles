@@ -29,5 +29,7 @@ return {
     vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
     vim.keymap.set("n", "<leader>fH", builtin.highlights, { desc = "Telescope highlights" })
+
+    vim.keymap.set('n', 'gt', builtin.lsp_references, { desc = "Telescope LSP references" })
   end,
 }
