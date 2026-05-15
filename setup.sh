@@ -53,7 +53,7 @@ cargo install stylua --features luajit
 cargo install tree-sitter-cli --locked
 
 echo "Stowing dotfiles..."
-stow alacritty starship fzf zsh nvim tmux aerospace git -t ~
+stow alacritty starship fzf yazi zsh nvim tmux aerospace git -t ~
 
 echo "Disabling font smoothing for Alacritty..."
 defaults write org.alacritty AppleFontSmoothing -int 0
