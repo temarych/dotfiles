@@ -21,6 +21,7 @@ local parsers = {
   "typescript",
   "tsx",
   "html",
+  "css",
 }
 
 local function setup_treesitter_for_files()
