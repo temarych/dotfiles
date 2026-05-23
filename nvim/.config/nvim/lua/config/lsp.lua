@@ -8,6 +8,7 @@ local function enable_lsps()
   vim.lsp.enable("pyright_ls")
   vim.lsp.enable("ts_ls")
   vim.lsp.enable("biome_ls")
+  vim.lsp.enable("css_ls")
 end
 
 local function override_lsp_config()
