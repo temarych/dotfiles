@@ -43,6 +43,7 @@ pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core
 pnpm add -g pyright
 pnpm add -g @typescript/native-preview
 pnpm add -g cssmodules-language-server 
+pnpm add -g @fsouza/prettierd
 
 echo "Installing uv dependencies.."
 uv tool install ty@latest
