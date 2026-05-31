@@ -10,6 +10,7 @@ local function enable_lsps()
   vim.lsp.enable("biome_ls")
   vim.lsp.enable("css_ls")
   vim.lsp.enable("cssmodules_ls")
+  vim.lsp.enable("eslint_ls")
 end
 
 local function override_lsp_config()
