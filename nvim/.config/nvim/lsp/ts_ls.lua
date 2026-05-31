@@ -7,7 +7,7 @@ return {
     return vim.lsp.rpc.start({ cmd, "--lsp", "--stdio" }, dispatchers)
   end,
   settings = {},
-  root_markers = { "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" },
+  root_markers = { "package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" },
   filetypes = {
     "javascript",
     "javascriptreact",

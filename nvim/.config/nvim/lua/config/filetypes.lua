@@ -9,3 +9,9 @@ vim.filetype.add({
     [".*/%.gitconfig%.local"] = "gitconfig",
   },
 })
+
+vim.filetype.add({
+  filename = {
+    ["Podfile"] = "ruby",
+  },
+})

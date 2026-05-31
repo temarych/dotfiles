@@ -22,6 +22,7 @@ return {
         tsx = { "biome" },
         json = { "biome" },
         jsonc = { "biome" },
+        css = { "biome" },
       },
       formatters = {
         biome = {

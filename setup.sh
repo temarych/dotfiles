@@ -42,6 +42,7 @@ echo "Installing pnpm dependencies..."
 pnpm add -g vscode-langservers-extracted yaml-language-server --allow-build=core-js
 pnpm add -g pyright
 pnpm add -g @typescript/native-preview
+pnpm add -g cssmodules-language-server 
 
 echo "Installing uv dependencies.."
 uv tool install ty@latest
