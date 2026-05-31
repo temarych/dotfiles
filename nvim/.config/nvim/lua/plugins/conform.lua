@@ -31,6 +31,9 @@ return {
         prettier = {
           require_cwd = true,
         },
+        prettierd = {
+          require_cwd = true,
+        },
       },
     })
   end,
