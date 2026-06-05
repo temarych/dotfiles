@@ -14,3 +14,8 @@ size = 13
 
 [general]
 import = ["./themes/tokyonight_night.toml"]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
