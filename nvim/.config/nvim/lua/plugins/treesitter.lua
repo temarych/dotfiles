@@ -25,6 +25,7 @@ local parsers = {
   "tsx",
   "html",
   "css",
+  "svelte",
 }
 
 local function setup_treesitter_for_files()

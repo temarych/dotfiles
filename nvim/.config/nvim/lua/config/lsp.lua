@@ -11,6 +11,7 @@ local function enable_lsps()
   vim.lsp.enable("css_ls")
   vim.lsp.enable("cssmodules_ls")
   vim.lsp.enable("eslint_ls")
+  vim.lsp.enable("svelte_ls")
 end
 
 local function override_lsp_config()

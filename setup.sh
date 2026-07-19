@@ -44,6 +44,7 @@ pnpm add -g pyright
 pnpm add -g @typescript/native-preview
 pnpm add -g cssmodules-language-server 
 pnpm add -g @fsouza/prettierd
+pnpm add -g svelte-language-server
 
 echo "Installing uv dependencies.."
 uv tool install ty@latest
