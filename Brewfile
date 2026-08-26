@@ -1,4 +1,5 @@
 tap "nikitabobko/tap"
+tap "hashicorp/tap"
 
 cask "alacritty"
 cask "nikitabobko/tap/aerospace"
@@ -23,3 +24,4 @@ brew "yazi"
 brew "bottom"
 
 brew "lua-language-server"
+brew "hashicorp/tap/terraform-ls"
