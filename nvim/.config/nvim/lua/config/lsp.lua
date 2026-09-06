@@ -13,6 +13,7 @@ local function enable_lsps()
   vim.lsp.enable("eslint_ls")
   vim.lsp.enable("svelte_ls")
   vim.lsp.enable("terraform_ls")
+  vim.lsp.enable("rust_ls")
 end
 
 local function override_lsp_config()

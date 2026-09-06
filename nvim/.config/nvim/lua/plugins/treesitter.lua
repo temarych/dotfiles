@@ -26,7 +26,8 @@ local parsers = {
   "html",
   "css",
   "svelte",
-  "terraform"
+  "terraform",
+  "rust",
 }
 
 local function setup_treesitter_for_files()
