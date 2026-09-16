@@ -28,6 +28,7 @@ local parsers = {
   "svelte",
   "terraform",
   "rust",
+  "swift",
 }
 
 local function setup_treesitter_for_files()
