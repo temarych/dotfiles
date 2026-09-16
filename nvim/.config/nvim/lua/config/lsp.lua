@@ -15,6 +15,7 @@ local function enable_lsps()
   vim.lsp.enable("terraform_ls")
   vim.lsp.enable("rust_ls")
   vim.lsp.enable("swift_ls")
+  vim.lsp.enable("bash_ls")
 end
 
 local function override_lsp_config()
