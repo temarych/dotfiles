@@ -23,6 +23,7 @@ return {
         json = { "biome", "prettierd", "prettier", stop_after_first = true },
         jsonc = { "biome", "prettierd", "prettier", stop_after_first = true },
         css = { "biome", "prettierd", "prettier", stop_after_first = true },
+        swift = { "swiftformat" },
         bzl = { "buildifier" },
       },
       formatters = {
