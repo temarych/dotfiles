@@ -26,5 +26,9 @@ brew "bottom"
 brew "lua-language-server"
 brew "hashicorp/tap/terraform-ls"
 brew "withered-magic/brew/starpls"
+
 brew "buildifier"
 brew "bazel"
+
+brew "swiftlint"
+brew "swiftformat"
