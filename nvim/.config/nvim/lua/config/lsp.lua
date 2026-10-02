@@ -16,6 +16,7 @@ local function enable_lsps()
   vim.lsp.enable("rust_ls")
   vim.lsp.enable("swift_ls")
   vim.lsp.enable("bash_ls")
+  vim.lsp.enable("starlark_ls")
 end
 
 local function override_lsp_config()

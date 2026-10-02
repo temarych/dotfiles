@@ -29,6 +29,7 @@ local parsers = {
   "terraform",
   "rust",
   "swift",
+  "starlark",
 }
 
 local function setup_treesitter_for_files()
