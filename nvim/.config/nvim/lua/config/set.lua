@@ -28,3 +28,5 @@ vim.opt.pumheight = 10
 vim.opt.pummaxwidth = 40
 
 vim.opt.winborder = "rounded"
+
+vim.o.exrc = true
